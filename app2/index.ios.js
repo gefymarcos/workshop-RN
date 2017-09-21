@@ -29,9 +29,9 @@ export default class app2 extends Component {
 }
 
 const getMessage = () => {
-  let numeroAleatorio = Math.floor(Math.random() * 5);
+  const numeroAleatorio = Math.floor(Math.random() * 5);
 
-  let frases = [
+  const frases = [
     'A vida trará coisas boas se tiveres paciência.',
     'Não compense na ira o que lhe falta na razão.',
     'A maior de todas as torres começa no solo.',
@@ -40,7 +40,7 @@ const getMessage = () => {
   ];
 
   Alert.alert(frases[numeroAleatorio]);
-}
+};
 
 const styles = StyleSheet.create({
   container:{
