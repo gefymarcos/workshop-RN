@@ -30,7 +30,6 @@ export default class app2 extends Component {
 
 const getMessage = () => {
   const numeroAleatorio = Math.floor(Math.random() * 15);
-
   const frases = [
     'A vida trará coisas boas se tiveres paciência.',
     'Demonstre amor e alegria em todas as oportunidades e verás que a paz nasce dentro de você.',
@@ -48,7 +47,6 @@ const getMessage = () => {
     'O bom-senso vai mais longe do que muito conhecimento.',
     'Quem quer colher rosas deve suportar os espinhos.'    
   ];
-
   Alert.alert(frases[numeroAleatorio]);
 };
 
