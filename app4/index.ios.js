@@ -7,29 +7,18 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
 } from 'react-native';
+
+import ListaItens from './src/components/ListaItens';
 
 export default class app4 extends Component {
   render() {
     return (
       
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
+        <ListaItens />
 
     );
   }
 }
-
-const styles = StyleSheet.create({
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-});
 
 AppRegistry.registerComponent('app4', () => app4);
