@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  View
+  ScrollView
 } from 'react-native';
 import axios from 'axios';
 import Itens from './Itens';
@@ -26,22 +26,20 @@ export default class ListaItens extends Component {
 
   render() {
     return (
-      <View>
+      <ScrollView style={styles.container}>
         { 
           this.state.listaItens.map(item => (
             <Itens key={item.titulo} item={item} />
           ))
         }
-      </View>
+      </ScrollView>
     );
   }
 
 }
 
 const styles = StyleSheet.create({
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  container: {
+    marginTop: 30 
   },
 });
