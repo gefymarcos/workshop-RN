@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  View,
-  Text
+  View
 } from 'react-native';
 import axios from 'axios';
 import Itens from './Itens';
@@ -18,7 +17,7 @@ export default class ListaItens extends Component {
   }
   
   componentWillMount() {
-    axios.get('https://gefymarcos.github.io/itens.html')
+    axios.get('https://lernante.github.io/itens.json')
       .then(res => this.setState({
         listaItens: res.data
       }))
@@ -29,7 +28,9 @@ export default class ListaItens extends Component {
     return (
       <View>
         { 
-          this.state.listaItens.map(item => { return (<Text>{item.titulo}</Text>)})
+          this.state.listaItens.map(item => (
+            <Itens key={item.titulo} item={item} />
+          ))
         }
       </View>
     );

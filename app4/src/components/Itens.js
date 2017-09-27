@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
-  Text
+  Text,
+  Image
 } from 'react-native';
 
 export default class Itens extends Component {
@@ -10,7 +11,14 @@ export default class Itens extends Component {
   render() {
     return (
       <View>
-        <Text>Criou</Text>
+        <Image 
+          style={{width: 250, height: 250}}
+          source={{uri: this.props.item.foto}} 
+        />
+        <Text>{this.props.item.titulo}</Text>
+        <Text>{this.props.item.gravadora}</Text>
+        <Text>{this.props.item.artista}</Text>
+        <Text>{this.props.item.publicacao}</Text>
       </View>
     );
   }
