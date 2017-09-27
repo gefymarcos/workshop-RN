@@ -33,7 +33,11 @@ const styles = StyleSheet.create({
     margin: 10,
     borderWidth: 1,
     borderColor: '#ccc',
-    padding: 20
+    padding: 20,
+    backgroundColor: '#fafafa',
+    shadowColor: '#000',
+    shadowOffset: { width: 6, height: 6 },
+    shadowOpacity: 0.5
   },
   item: {    
     alignItems: 'center',
