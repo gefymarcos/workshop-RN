@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import { Header, Painel, Result } from './Components';
+import { Header, Painel } from './Components';
+import Result from './Components/Result';
 
 export default props => (
   <View style={styles.container}>
@@ -19,16 +20,16 @@ export default props => (
 
 const styles = StyleSheet.create({
   container: {
-    flex: 10
+    flex: 8
   },
   header: {
     flex: 1
   },
   painel: {
-    flex: 7,
+    flex: 3,
   },
   result: {
-    flex: 2,
+    flex: 4,
   }
 });
 

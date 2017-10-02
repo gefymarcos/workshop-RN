@@ -1,9 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+
+import { Input, Button } from './';
 
 const Painel = props => (
   <View style={styles.container}>
-    <Text style={styles.title}>Painel</Text>
+    <View style={styles.peopleBox}>
+      <Input label='Homens' />
+      <Input label='Mulheres' />
+      <Input label='Crianças' />
+    </View>
+    <View style={styles.peopleBox}>
+      <Input label='Quantos bebem alcool?' />
+      <Input label='Tem vegetárianos?' />
+    </View>
+    <Button title='Calcular' />
   </View>
 );
 
@@ -13,9 +24,10 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
+    flex: 1
   },
-  title: {
-    fontSize: 24,
-    marginTop: 30,
+  peopleBox: {
+    flexDirection: 'row',
+    flex: 1
   }
 });
