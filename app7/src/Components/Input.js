@@ -6,7 +6,7 @@ export class Input extends Component {
     super(props);
 
     this.state = {
-      value: ''
+      value: 0
     };
   }
 
@@ -19,6 +19,7 @@ export class Input extends Component {
           style={styles.input}
           maxLength={2}
           value={this.state.value}
+          onChange={res => { this.setState({ value: res }); }}
         />
       </View>
     );
