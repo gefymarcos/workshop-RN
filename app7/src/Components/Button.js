@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, TouchableHighlight } from 'react-native';
 
 const Button = props => (
-    <TouchableHighlight style={styles.button}>
+    <TouchableHighlight style={styles.button} onPress={props.action}>
       <Text style={styles.buttonText}>{props.title}</Text>
     </TouchableHighlight> 
 );

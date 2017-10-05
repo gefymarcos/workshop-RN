@@ -2,14 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 export class Input extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      value: 0
-    };
-  }
-
+  
   render() {
     return (
       <View style={styles.peopleInput}>
@@ -18,7 +11,7 @@ export class Input extends Component {
           placeholder="0"
           style={styles.input}
           maxLength={2}
-          value={this.state.value}
+          value={this.props.people}
           onChange={res => { this.setState({ value: res }); }}
         />
       </View>
