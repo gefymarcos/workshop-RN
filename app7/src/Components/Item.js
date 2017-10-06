@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const Item = props => (  
+const Item = props => (
   <View style={styles.itemBox}>
     <Text style={styles.itemTitle}>{props.title}: </Text>
-    <Text style={styles.itemDescription}>{props.description} {props.unidade}</Text>
+    <Text style={styles.itemDescription}>{props.description} {props.unit}</Text>
   </View>
 );
 
