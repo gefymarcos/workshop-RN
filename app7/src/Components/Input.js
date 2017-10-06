@@ -12,7 +12,7 @@ export class Input extends Component {
           style={styles.input}
           maxLength={2}
           value={this.props.people}
-          onChange={res => { this.setState({ value: res }); }}
+          onChangeText={value => this.props.onChange(this.props.id, value)}
         />
       </View>
     );
