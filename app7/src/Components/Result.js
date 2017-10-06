@@ -17,6 +17,7 @@ class Result extends Component {
               key={i}
               title={item.title}
               description={item.description}
+              amount={item.amount}
               unit={item.unit}
             />
           )}

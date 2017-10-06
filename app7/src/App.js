@@ -21,12 +21,32 @@ export default class App extends Component {
       resultado: [
         { 
           title: 'Carne',
-          description: '',
+          description: 'Carnes sem osso, linguiça, coração, frango...',
+          amount: '',
           unit: '' 
         },
         { 
           title: 'Guarnicao',
+          description: 'Farofa, queijo, pães, arroz, salada de maionese...',
+          amount: '',
+          unit: ''
+        },
+        {
+          title: 'Cerveja',
+          description: 'Ou bebida alcoolica de sua preferencia',
+          amount: '',
+          unit: ''
+        },
+        {
+          title: 'Refrigerante',
+          description: 'Refrigerantes, água, sucos...',
+          amount: '',
+          unit: ''
+        },
+        {
+          title: 'Carvão',
           description: '',
+          amount: '',
           unit: ''
         }
       ]
@@ -65,13 +85,52 @@ export default class App extends Component {
     if (carne > 0) {
       carvao = Math.round((carne / 5) * 6);
     }
+    
+    for (let i = 0; i < resultado.length; i++) {
+      if (resultado[i].title === 'Carne') {
+        if (carne < 1000) {
+          resultado[i].amount = `${carne}`;
+          resultado[i].unit = 'gramas';
+        } else {
+          resultado[i].amount = `${carne / 1000}`;
+          resultado[i].unit = 'quilos';
+        }
+      } else if (resultado[i].title === 'Guarnicao') {
+        if (guarnicao < 1000) {
+          resultado[i].amount = `${guarnicao}`;
+          resultado[i].unit = 'gramas';
+        } else {
+          resultado[i].amount = `${guarnicao / 1000}`;
+          resultado[i].unit = 'quilos';
+        }
+      } else if (resultado[i].title === 'Cerveja') {
+        if (cerveja < 1000) {
+          resultado[i].amount = `${cerveja}`;
+          resultado[i].unit = 'ml';
+        } else {
+          resultado[i].amount = `${cerveja / 1000}`;
+          resultado[i].unit = 'litros';
+        }
+      } else if (resultado[i].title === 'Refrigerante') {
+        if (bebidas < 1000) {
+          resultado[i].amount = `${bebidas}`;
+          resultado[i].unit = 'ml';
+        } else {
+          resultado[i].amount = `${bebidas / 1000}`;
+          resultado[i].unit = 'litros';
+        }
+      } else if (resultado[i].title === 'Carvão') {
+        if (carvao < 1000) {
+          resultado[i].amount = `${carvao}`;
+          resultado[i].unit = 'gramas';
+        } else {
+          resultado[i].amount = `${carvao / 1000}`;
+          resultado[i].unit = 'quilos';
+        }
+      }
+    }
 
     this.setState({
-      carne, 
-      guarnicao, 
-      cerveja, 
-      bebidas,
-      carvao,
       resultado
     });
 
